@@ -1,19 +1,23 @@
 /// <reference path="alien.ts" />
 /// <reference path="cloud.ts" />
-
+/// <reference path="../dist/js/jumping.js" />
 
 class Game {
     
-    private Alien: Alien;
-    private context: CanvasRenderingContext2D;
-    private canvas: HTMLCanvasElement;
-    private cloud:      Cloud;
-    private cloud2:     Cloud;
+    private Alien:          Alien;
+    private context:        CanvasRenderingContext2D;
+    private canvas:         HTMLCanvasElement;
+    private cloud:          Cloud;
+    private cloud2:         Cloud;
+    private background:     HTMLImageElement;
+    public static grav:     number = 9.81;
+    
     
     constructor() {
         // dddd
         this.canvas = document.getElementsByTagName("canvas")[0];
         this.context = this.canvas.getContext('2d');
+        
         
         
         
@@ -36,6 +40,12 @@ class Game {
         
         this.context.fillStyle="#001188";
         this.context.fillRect(0,0,842,595);
+        
+        
+        // teken hier de bg image
+        this.background = new Image();
+        this.background.src = 'images/background1.png';
+        this.context.drawImage(this.background,0,0);       
         
         this.Alien.draw();
         

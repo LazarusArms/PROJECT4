@@ -1,5 +1,6 @@
 html, body {
-    background-color: #70CF51;
+    background-image: url("../images/kylo.jpg");
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     overflow:hidden;
     margin:0px; padding:0px;
@@ -18,10 +19,10 @@ body * {
 }
 
 gamecontainer {
-    width:842px;
-    height: 595px;
-    left:calc(50% - 421px);
-    top:calc(50% - 297px);
+    width:838px;
+    height: 591px;
+    left:calc(50% - 419px);
+    top:calc(50% - 295px);
 }
 
 clouds {

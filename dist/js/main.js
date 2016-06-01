@@ -17,8 +17,8 @@ class Alien {
         this.speed = 5;
         let framesPerSecond = 7;
         this.animationSpeed = 60 / framesPerSecond;
-        this.x = 20;
-        this.y = 20;
+        this.x = 0;
+        this.y = 350;
         window.addEventListener("keydown", (e) => this.onKeyDown(e));
         window.addEventListener("keyup", (e) => this.onKeyUp(e));
     }
@@ -54,13 +54,17 @@ class Alien {
                 this.directionY = 0;
                 break;
             case 39:
-                this.directionX = 0;
+                if (this.directionX == 1) {
+                    this.directionX = 0;
+                }
                 break;
             case 40:
                 this.directionY = 0;
                 break;
             case 37:
-                this.directionX = 0;
+                if (this.directionX == -1) {
+                    this.directionX = 0;
+                }
                 break;
         }
     }
@@ -125,10 +129,14 @@ class Game {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.context.fillStyle = "#001188";
         this.context.fillRect(0, 0, 842, 595);
+        this.background = new Image();
+        this.background.src = 'images/background1.png';
+        this.context.drawImage(this.background, 0, 0);
         this.Alien.draw();
         requestAnimationFrame(() => this.update());
     }
 }
+Game.grav = 9.81;
 window.addEventListener("load", function () {
     new Game();
 });

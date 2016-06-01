@@ -34,8 +34,8 @@ class Alien {
         let framesPerSecond = 7;
         this.animationSpeed  = 60 / framesPerSecond;
         
-         this.x = 20;
-         this.y = 20;
+         this.x = 0;
+         this.y = 350;
       
         window.addEventListener("keydown", (e) => this.onKeyDown(e));
         window.addEventListener("keyup"  , (e) => this.onKeyUp(e));
@@ -79,13 +79,17 @@ class Alien {
                 this.directionY = 0;
                 break;
             case 39: //RIGHT
+            if (this.directionX == 1) {       
                 this.directionX = 0;
+            }
                 break;
             case 40: //DOWN
                 this.directionY = 0;
                 break;
             case 37: //LEFT
+                if (this.directionX == -1) {       
                 this.directionX = 0;
+            }
                 break;
         }
     }
