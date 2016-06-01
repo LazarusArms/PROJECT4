@@ -1,25 +1,25 @@
 ![banner](http://i.imgur.com/GthzNtS.png "Banner PH")
 
-*Latest patch: [0.01](https://github.com/larsbroer94/sc2_PlanetZ/#Table of Contents)*
+*Latest patch: [0.01](https://github.com/LazarusArms/PROJECT4)*
 
 *Fer and Dex's patch notes can be found [here [PH]](https://github.com/LazarusArms/PROJECT4)*
 
 #Table of Contents
-1. [Introduction]
-2. [How to play]
-3. [Future Updates]
-4. [Optional Installation]
-5. [Contribute]
+1. [Introduction](https://github.com/LazarusArms/PROJECT4)
+2. [How To Play](https://github.com/LazarusArms/PROJECT4#HowToPlay)
+3. [Future Updates](https://github.com/LazarusArms/PROJECT4)
+4. [Optional Installation](https://github.com/LazarusArms/PROJECT4)
+5. [Contribute](https://github.com/LazarusArms/PROJECT4)
 
 
 #Introduction
 Welcome to the GitHub page of **Fer and Dex [PH]**.
 
-#How to play
+#HowToPlay
 Currently Fer and Dex is unavailable to play.
 
 #Future Updates
-- [x] Customize your character
+- [ ] Customize your character
 - [ ] Friendly characters
 - [ ] Opponents
 - [ ] Side quests
