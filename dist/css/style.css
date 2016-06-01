@@ -1,0 +1,26 @@
+body {
+    /*background-color: lightseagreen;*/
+    background-image: url(../images/background.png);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    margin: 0px; padding: 0px;
+}
+
+body * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+clouds {
+	width:414px; min-height:86px;
+	background-image: url('../images/cloud9.png');
+}
+
+/*battleship {
+    background-image: url(../images/battleship.png);
+    width:100px; height: 100px;
+}*/
