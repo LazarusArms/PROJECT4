@@ -5,17 +5,17 @@
 *Fer and Dex's patch notes can be found [here [PH]](https://github.com/LazarusArms/PROJECT4)*
 
 #Table of Contents
-1. [Introduction](https://github.com/LazarusArms/PROJECT4)
-2. [How To Play](https://github.com/LazarusArms/PROJECT4#HowToPlay)
-3. [Future Updates](https://github.com/LazarusArms/PROJECT4)
-4. [Optional Installation](https://github.com/LazarusArms/PROJECT4)
-5. [Contribute](https://github.com/LazarusArms/PROJECT4)
+1. [Introduction](#Introduction)
+2. [How To Play](#How-To-Play)
+3. [Future Updates](#Future-Updates)
+4. [Optional Installation](#Optional-Installation)
+5. [Contribute](#Contribute)
 
 
 #Introduction
 Welcome to the GitHub page of **Fer and Dex [PH]**.
 
-#HowToPlay
+#How To Play
 Currently Fer and Dex is unavailable to play.
 
 #Future Updates
