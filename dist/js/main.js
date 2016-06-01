@@ -17,8 +17,8 @@ class Alien {
         this.speed = 5;
         let framesPerSecond = 7;
         this.animationSpeed = 60 / framesPerSecond;
-        this.x = 0;
-        this.y = 635;
+        this.x = 20;
+        this.y = 20;
         window.addEventListener("keydown", (e) => this.onKeyDown(e));
         window.addEventListener("keyup", (e) => this.onKeyUp(e));
     }
@@ -123,6 +123,8 @@ class Game {
     }
     draw() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.context.fillStyle = "#001188";
+        this.context.fillRect(0, 0, 842, 595);
         this.Alien.draw();
         requestAnimationFrame(() => this.update());
     }

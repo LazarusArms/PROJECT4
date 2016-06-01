@@ -1,10 +1,12 @@
-body {
-    /*background-color: lightseagreen;*/
-    background-image: url(../images/background.png);
-    background-size: cover;
+html, body {
+    background-color: #70CF51;
     font-family: Arial, Helvetica, sans-serif;
     overflow:hidden;
-    margin: 0px; padding: 0px;
+    margin:0px; padding:0px;
+    /*zet hier een algemene bg 
+    background-image: url('../images/background.png');
+    background-size: cover;
+    */
 }
 
 body * {
@@ -13,6 +15,13 @@ body * {
     margin:0px; padding:0px;
     box-sizing: border-box;
     background-repeat: no-repeat;
+}
+
+gamecontainer {
+    width:842px;
+    height: 595px;
+    left:calc(50% - 421px);
+    top:calc(50% - 297px);
 }
 
 clouds {
