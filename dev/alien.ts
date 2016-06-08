@@ -15,6 +15,7 @@ class Alien {
     private image: HTMLImageElement;
     
     private currentFrame: number    = 0;
+    private animationX: number      = 0;
     private animationY: number      = 0;
     private animationSpeed: number  = 0;
     
@@ -31,7 +32,7 @@ class Alien {
         this.speed      = 5;
         
         // het aantal beeldjes per seconde is nu 3
-        let framesPerSecond = 7;
+        let framesPerSecond = 3;
         this.animationSpeed  = 60 / framesPerSecond;
         
          this.x = 0;
@@ -67,6 +68,7 @@ class Alien {
                 break;
             case 37: //LEFT
                 this.directionX = -1;
+                this.animationX =  7;
                 this.animationY =  1; 
                 break;
         }
@@ -78,14 +80,17 @@ class Alien {
             case 38: //UP
                 this.directionY = 0;
                 break;
+                
             case 39: //RIGHT
             if (this.directionX == 1) {       
                 this.directionX = 0;
             }
                 break;
+                
             case 40: //DOWN
                 this.directionY = 0;
                 break;
+                
             case 37: //LEFT
                 if (this.directionX == -1) {       
                 this.directionX = 0;
@@ -98,6 +103,7 @@ class Alien {
         this.x = this.x + this.speed * this.directionX;
         this.y = this.y + this.speed * this.directionY;
     }
+    
     
     public draw(): void {
         // this.context.drawImage(this.image, this.x, this.y, 400, 308); // x, y, width, height
@@ -112,16 +118,31 @@ class Alien {
             dw	Destination width	Frame width
             dh	Destination height	Frame height
          */
-        //this.currentFrame++;
-        this.timer++;
-        if(this.timer > this.animationSpeed){
-             this.currentFrame++;
-             this.timer = 0;
-        }
+        //this.currentFrame++;  
         
-        if (this.currentFrame > 7   ) {
-            this.currentFrame= 0;
-        }
+       
+        
+        
+        // this.timer--;
+        //      if(this.animationSpeed > this.timer){
+        //      this.currentFrame = 7;      
+        //      this.currentFrame--;
+        //      this.timer = 7;
+        //     }
+            
+        //     if (this.currentFrame < 0 ) {
+        //         this.currentFrame = 7;
+        //     }
+         
+        this.timer++;
+            if(this.timer > this.animationSpeed){
+                this.currentFrame++;
+                this.timer = 0;
+            }
+            
+            if (this.currentFrame > 7   ) {
+                this.currentFrame = 0;
+            }
         
         
         

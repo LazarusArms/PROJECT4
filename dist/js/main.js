@@ -6,6 +6,7 @@ class Alien {
         this.y = 0;
         this.speed = 0;
         this.currentFrame = 0;
+        this.animationX = 0;
         this.animationY = 0;
         this.animationSpeed = 0;
         this.frameHeight = 119;
@@ -15,7 +16,7 @@ class Alien {
         this.directionX = 0;
         this.directionY = 0;
         this.speed = 5;
-        let framesPerSecond = 7;
+        let framesPerSecond = 3;
         this.animationSpeed = 60 / framesPerSecond;
         this.x = 0;
         this.y = 350;
@@ -44,6 +45,7 @@ class Alien {
                 break;
             case 37:
                 this.directionX = -1;
+                this.animationX = 7;
                 this.animationY = 1;
                 break;
         }
