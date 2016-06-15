@@ -4,7 +4,7 @@
 
 class Game {
     
-    private Alien: Alien;
+    private Alien: Aliun;
     private context: CanvasRenderingContext2D;
     private canvas: HTMLCanvasElement;
     
