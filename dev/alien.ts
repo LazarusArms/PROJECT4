@@ -3,26 +3,20 @@
  */
 class Alien {
     
-    private directionX: number = 0;
-    private directionY: number = 0;
-
-    private x: number = 0;
-    private y: number = 0;
-    
-    private speed: number = 0;
-    
-    private context: CanvasRenderingContext2D;
-    private image: HTMLImageElement;
-    
-    private currentFrame: number    = 0;
-    private animationX: number      = 0;
-    private animationY: number      = 0;
-    private animationSpeed: number  = 0;
-    
-    private frameHeight: number     = 119;
-    private frameWidth: number      = 92;
-    
-    private timer: number           = 0;
+    private directionX:     number = 0;
+    private directionY:     number = 0;
+    private x:              number = 0;
+    public  y:              number = 0;
+    private speed:          number = 0;
+    private context:        CanvasRenderingContext2D;
+    private image:          HTMLImageElement;
+    private currentFrame:   number    = 0;
+    private animationX:     number      = 0;
+    private animationY:     number      = 0;
+    private animationSpeed: number      = 0;
+    private frameHeight:    number      = 119;
+    private frameWidth:     number      = 92;
+    private timer:          number      = 0;
     
     constructor() {
         this.createCanvasElement();
@@ -32,16 +26,17 @@ class Alien {
         this.speed      = 5;
         
         // het aantal beeldjes per seconde is nu 3
-        let framesPerSecond = 3;
+        let framesPerSecond = 10;
         this.animationSpeed  = 60 / framesPerSecond;
         
          this.x = 0;
-         this.y = 350;
+         this.y = 0;
       
         window.addEventListener("keydown", (e) => this.onKeyDown(e));
         window.addEventListener("keyup"  , (e) => this.onKeyUp(e));
     }
     
+    //creert de character op de canvas
     private createCanvasElement() : void {
         var canvas = document.getElementsByTagName("canvas")[0];
         this.context = canvas.getContext('2d');
@@ -51,12 +46,19 @@ class Alien {
         
     }
     
+    public checkCollision () : void {
+        if(this.y > Game.height - 250) {
+            this.y = Game.height - 250;
+        }
+    }
+    
     // keyboard input zorgt dat de snelheid wordt aangepast
     private onKeyDown(event:KeyboardEvent):void {
         switch(event.keyCode){
             case 38: //UP
-                this.directionY = -1;
-                this.animationY = 0; 
+                this.directionY = 0;
+                this.animationY = 0;
+                 
                 break;
             case 39: //RIGHT
                 this.directionX = 1;
@@ -70,6 +72,7 @@ class Alien {
                 this.directionX = -1;
                 this.animationX =  7;
                 this.animationY =  1; 
+                // this.currentFrame = 7;
                 break;
         }
     }
@@ -106,35 +109,10 @@ class Alien {
     
     
     public draw(): void {
-        // this.context.drawImage(this.image, this.x, this.y, 400, 308); // x, y, width, height
-        /**
-         * img	Source image object	Sprite sheet
-            sx	Source x	Frame index times frame width
-            sy	Source y	0
-            sw	Source width	Frame width
-            sh	Source height	Frame height
-            dx	Destination x	0
-            dy	Destination y	0
-            dw	Destination width	Frame width
-            dh	Destination height	Frame height
-         */
-        //this.currentFrame++;  
-        
-       
-        
-        
-        // this.timer--;
-        //      if(this.animationSpeed > this.timer){
-        //      this.currentFrame = 7;      
-        //      this.currentFrame--;
-        //      this.timer = 7;
-        //     }
-            
-        //     if (this.currentFrame < 0 ) {
-        //         this.currentFrame = 7;
-        //     }
          
-        this.timer++;
+         //spritesheet animatie normaal
+        if (this.directionX == 1) {
+            this.timer++;
             if(this.timer > this.animationSpeed){
                 this.currentFrame++;
                 this.timer = 0;
@@ -143,6 +121,22 @@ class Alien {
             if (this.currentFrame > 7   ) {
                 this.currentFrame = 0;
             }
+        }  
+        
+        // spritesheet animatie reverse
+        if (this.directionX == -1) {
+            this.timer++;
+            if (this.timer > this.animationSpeed){
+                this.currentFrame--;
+                this.timer = 0;
+            }
+            
+            if (this.currentFrame < 0 ) {
+                this.currentFrame = 7;
+            }
+        }   
+        console.log(this.currentFrame);
+            
         
         
         
