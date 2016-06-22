@@ -1,5 +1,5 @@
 class Alien {
-    constructor() {
+    constructor(g) {
         this.directionX = 0;
         this.directionY = 0;
         this.x = 0;
@@ -39,6 +39,7 @@ class Alien {
             case 38:
                 this.directionY = 0;
                 this.animationY = 0;
+                this.y;
                 break;
             case 39:
                 this.directionX = 1;
@@ -78,6 +79,9 @@ class Alien {
     move() {
         this.x = this.x + this.speed * this.directionX;
         this.y = this.y + this.speed * this.directionY;
+        if (this.x + 100 > this.) {
+            this.directionX == 0;
+        }
     }
     draw() {
         if (this.directionX == 1) {

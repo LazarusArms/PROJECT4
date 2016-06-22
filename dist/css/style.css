@@ -34,7 +34,12 @@ cloud {
 	background-image: url('../images/cloud9.png');
     background-size: 25%;
     z-index: 1000;
-    
+}
+
+coin {
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/coinGold.png');    
 }
 
 

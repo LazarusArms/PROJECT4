@@ -1,5 +1,7 @@
 /// <reference path="alien.ts" />
 /// <reference path="cloud.ts" />
+/// <reference path="coin.ts" />
+
 
 
 class Game {

@@ -17,8 +17,9 @@ class Alien {
     private frameHeight:    number      = 119;
     private frameWidth:     number      = 92;
     private timer:          number      = 0;
+    private game:           Game
     
-    constructor() {
+    constructor(g:Game) {
         this.createCanvasElement();
         
         this.directionX = 0;
@@ -58,6 +59,7 @@ class Alien {
             case 38: //UP
                 this.directionY = 0;
                 this.animationY = 0;
+                this.y 
                  
                 break;
             case 39: //RIGHT
@@ -105,7 +107,13 @@ class Alien {
     public move() : void {
         this.x = this.x + this.speed * this.directionX;
         this.y = this.y + this.speed * this.directionY;
+        
+        if (this.x + 100 > this.) {
+            this.directionX == 0;
+        }
+        
     }
+    
     
     
     public draw(): void {
