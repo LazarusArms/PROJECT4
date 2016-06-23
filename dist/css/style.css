@@ -14,24 +14,24 @@ html, body {
 }
 
 body * {
-    position:           absolute;
-    display:            block;
-    margin:             0px; padding:0px;
-    box-sizing:         border-box;
-    background-repeat:  no-repeat;
-    z-index:            0;
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
 }
 
 gamecontainer {
-    width:  838px;
+    width:838px;
     height: 591px;
-    left:   calc(50% - 419px);
-    top:    calc(50% - 295px);
+    left:calc(50% - 419px);
+    top:calc(50% - 295px);
 }
 
-cloud {
+clouds {
 	width:414px; min-height:86px;
 	background-image: url('../images/cloud9.png');
+<<<<<<< HEAD
     background-size: 25%;
     z-index: 1000;
 }
@@ -40,6 +40,8 @@ coin {
     width: 70px;
     height: 70px;
     background-image: url('../images/coinGold.png');    
+=======
+>>>>>>> parent of 491324f... General Progress
 }
 
 
