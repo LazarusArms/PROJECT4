@@ -113,18 +113,14 @@ class Cloud {
     constructor(y) {
         this.x = 0;
         this.y = 0;
-        this.width = 200;
-        this.height = 102;
-        this.speed = 1;
-        console.log('Constructor Tree');
-        var canvas = document.getElementsByTagName("canvas")[0];
-        this.context = canvas.getContext('2d');
-        this.image = new Image();
-        this.image.src = 'images/cloud9.png';
+        this.width = 414;
+        this.height = 86;
+        this.speed = 3;
+        console.log('Hoi');
+        this.cloudTag = document.createElement("cloud");
+        document.body.appendChild(this.cloudTag);
         this.x = 0 - this.width;
         this.y = y;
-        console.log(this.y);
-        this.speed = 10 * Math.random();
     }
     update() {
         this.x += this.speed;
@@ -132,11 +128,12 @@ class Cloud {
     }
     checkCollision() {
         if (this.x > window.innerWidth) {
-            this.x = 0 - this.width;
+            this.x = 0;
         }
     }
     draw() {
-        this.context.drawImage(this.image, this.x, this.y);
+        this.cloudTag.style.transform =
+            "translate (" + this.x + "px, " + this.y + "px)";
     }
 }
 class Game {
